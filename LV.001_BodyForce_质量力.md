@@ -127,7 +127,7 @@ $$
 \frac{\partial p}{\partial z} = \rho f_z = -\rho (g+2)
 $$
 
-从液面 $z=0$（$p=p_0$）积分到液底 $z=-h$：
+从液面 $z=0$（ $p=p_0$ ）积分到液底 $z=-h$：
 
 $$
 p(-h) = p_0 + \rho (g+2) h
