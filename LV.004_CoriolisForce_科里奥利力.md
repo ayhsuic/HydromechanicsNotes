@@ -228,7 +228,7 @@ $$
 在旋转参考系的流体力学动量方程中，科里奥利力也作为体积力源项登场：
 
 $$
-\rho \frac{D\vec{v}_r}{Dt} = -\nabla p + \mu \nabla^2 \vec{v}_r - \rho\,\vec{\omega}\times(\vec{\omega}\times\vec{r}) - 2\rho\,\vec{\omega}\times\vec{v}_r
+\rho \frac{D\vec{v}_r}{Dt} = -\nabla p + \mu \nabla^2 \vec{v}_r - \rho\\,\vec{\omega}\times(\vec{\omega}\times\vec{r}) - 2\rho\\,\vec{\omega}\times\vec{v}_r
 $$
 
 这里 $\vec{v}_r$ 是流体在旋转系中的相对速度。最后一项 $-2\rho\vec{\omega}\times\vec{v}_r$ 就是科里奥利力对单位体积流体的贡献。在地球物理流体力学（大气、海洋）里，这可是主角！没有它，连台风都卷不起来～ 🌀
