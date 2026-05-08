@@ -106,7 +106,7 @@ $$
 \end{aligned}
 $$
 
-> 💡 **小注**：这里用到了叉积的导数规则 $(f \times g)' = f' \times g + f \times g'$。$\vec{\omega}$ 恒定所以第一项为零；$\vec{r}$ 的相对变化率就是相对速度 $\vec{v}_r$。
+> 💡 **小注**：这里用到了叉积的导数规则 $(f \times g)' = f' \times g + f \times g'$ 。 $\vec{\omega}$ 恒定所以第一项为零； $\vec{r}$ 的相对变化率就是相对速度 $\vec{v}_r$ 。
 
 于是整个第②项变成：
 
@@ -122,7 +122,7 @@ $$
 
 $$
 \begin{aligned}
-\vec{a}_{\text{绝对}} &= \bigl( \vec{a}_r + \vec{\omega} \times \vec{v}_r \bigr) + \bigl( \vec{\omega} \times \vec{v}_r + \vec{\omega} \times (\vec{\omega} \times \vec{r}) \bigr) \\[6pt]
+\vec{a}_{\text{绝对}} &= \bigl( \vec{a}_r + \vec{\omega} \times \vec{v}_r \bigr) + \bigl( \vec{\omega} \times \vec{v}_r + \vec{\omega} \times (\vec{\omega} \times \vec{r}) \bigr) \\
 &= \vec{a}_r + \underbrace{2\,\vec{\omega} \times \vec{v}_r}_{\text{两个}\vec{\omega}\times\vec{v}_r\text{合并}} + \vec{\omega} \times (\vec{\omega} \times \vec{r})
 \end{aligned}
 $$
@@ -160,16 +160,17 @@ $$
 | 兄弟 | 符号 | 物理意义 | 三月七的翻译 |
 |:---:|:---:|---|---|
 | **相对加速度** | $\vec{a}_r$ | 你在转盘里看到的、奶茶相对你的加速度。 | 就是你觉得奶茶“咻”地飞起来的那股劲。 |
-| **科里奥利加速度** | $2\,\vec{\omega} \times \vec{v}_r$ | **只在你相对旋转系有速度时出现**，且方向垂直于 $\vec{\omega}$ 和 $\vec{v}_r$。 | 🔥**主角！** 就是它让你走路跑偏、炮弹拐弯、台风打旋！ |
+| **科里奥利加速度** | $2\\,\vec{\omega} \times \vec{v}_r$ | **只在你相对旋转系有速度时出现**，且方向垂直于 $\vec{\omega}$ 和 $\vec{v}_r$。 | 🔥**主角！** 就是它让你走路跑偏、炮弹拐弯、台风打旋！ |
 | **向心加速度** | $\vec{\omega} \times (\vec{\omega} \times \vec{r})$ | 即使你相对转盘不动也存在，方向指向轴心。 | 你坐旋转咖啡杯时，死死把你压在杯壁上的那股向心感。 |
 
 ---
 
 ## 🦸 第四步：把科里奥利加速度“踹”到左边，科里奥利力诞生！
 
-在惯性系，牛顿老爷子说：$\vec{F}_{\text{真实}} = m\vec{a}_{\text{绝对}}$。
+在惯性系，牛顿老爷子说： $\vec{F}\_{\text{真实}} = m\vec{a}\_{\text{绝对}}$ 。
 
-把上面的加速度变换公式代进去：
+把上面的加速度变换公式代进去： 
+
 $$
 \vec{F}_{\text{真实}} = m\bigl(\vec{a}_r + 2\vec{\omega}\times\vec{v}_r + \vec{\omega}\times(\vec{\omega}\times\vec{r})\bigr)
 $$
@@ -177,20 +178,22 @@ $$
 我们想在旋转系里用相对加速度 $\vec{a}_r$ 来写方程，所以把除了 $\vec{a}_r$ 以外的项都挪到左边：
 
 $$
-\vec{F}_{\text{真实}} - m\,\vec{\omega}\times(\vec{\omega}\times\vec{r}) - 2m\,\vec{\omega}\times\vec{v}_r = m\vec{a}_r
+\vec{F}_{\text{真实}} - m\\,\vec{\omega}\times(\vec{\omega}\times\vec{r}) - 2m\\,\vec{\omega}\times\vec{v}_r = m\vec{a}_r
 $$
 
 瞧见没？左边硬生生多出来两个带负号、长得像力的东西。为了让旋转系里的方程看起来也像“合力 = 质量 × 相对加速度”，我们就把它们**假装成力**：
 
-- 离心力：$\vec{F}_{\text{离心}} = -m\,\vec{\omega}\times(\vec{\omega}\times\vec{r})$
+- 离心力： $\vec{F}_{\text{离心}} = -m\\,\vec{\omega}\times(\vec{\omega}\times\vec{r})$ 
 - **科里奥利力**：
+
 $$
-\boxed{\vec{F}_{\text{科氏}} = -2m\,\vec{\omega}\times\vec{v}_r}
+\boxed{\vec{F}_{\text{科氏}} = -2m\\,\vec{\omega}\times\vec{v}_r}
 $$
 
-对应的**单位质量科里奥利力**就是：
+对应的**单位质量科里奥利力**就是： 
+
 $$
-\boxed{\vec{f}_{\text{科氏}} = -2\,\vec{\omega}\times\vec{v}_r}
+\boxed{\vec{f}_{\text{科氏}} = -2\\,\vec{\omega}\times\vec{v}_r}
 $$
 
 ---
@@ -199,20 +202,20 @@ $$
 
 1. **负号的根源**：和之前平移惯性力一模一样，它来自**移项**。在惯性系里它是右边加速度大家庭的成员，我们为了在旋转系里用 $\vec{a}_r$ 写牛二，把它作为“补偿项”挪到左边，所以前面多了个负号。它是标准的“补丁力”。
 
-2. **方向的妖异**：注意那个叉乘！$-\vec{\omega}\times\vec{v}_r$ 表示科里奥利力的方向**既垂直于旋转轴 $\vec{\omega}$，又垂直于相对速度 $\vec{v}_r$**。这导致一个反直觉的效果：
+2. **方向的妖异**：注意那个叉乘！ $-\vec{\omega}\times\vec{v}_r$ 表示科里奥利力的方向**既垂直于旋转轴 $\vec{\omega}$ ，又垂直于相对速度 $\vec{v}_r$** 。这导致一个反直觉的效果：
    - 在逆时针旋转的转盘上，如果你从中心往外走，科里奥利力会把你往**右侧**推。
    - 如果你从外往里走，它把你往**左侧**推。
    - 这就是为什么北半球河流右岸冲刷更厉害、信风会拐弯、还有浴缸放水时的漩涡方向（虽然微弱但原理相通）！
 
-3. **它不是纯粹的质量力**：和平移惯性力、离心力不同，科里奥利力不仅正比于质量 $m$，还**依赖于相对速度 $\vec{v}_r$**。所以有些教科书不把它归类为严格的“体积力”，但它同样是惯性力家族的合法成员，在旋转系里必须加进方程。
+3. **它不是纯粹的质量力**：和平移惯性力、离心力不同，科里奥利力不仅正比于质量 $m$ ，还**依赖于相对速度 $\vec{v}_r$** 。所以有些教科书不把它归类为严格的“体积力”，但它同样是惯性力家族的合法成员，在旋转系里必须加进方程。
 
 ---
 
 ## 🌍 举个地球上的栗子 🌰
 
-地球自转角速度 $\omega \approx 7.29\times10^{-5}\,\text{rad/s}$。在北半球，$\vec{\omega}$ 垂直地面指向上方。
+地球自转角速度 $\omega \approx 7.29\times10^{-5}\\,\text{rad/s}$。在北半球， $\vec{\omega}$ 垂直地面指向上方。
 
-如果有个人从南往北跑（$\vec{v}_r$ 向北），用右手定则：
+如果有个人从南往北跑（ $\vec{v}_r$ 向北），用右手定则：
 - $\vec{\omega}\times\vec{v}_r$ 指向**西**。
 - 科里奥利力 $\vec{F}_{\text{科氏}} = -2m\vec{\omega}\times\vec{v}_r$ 指向**东**。
 
@@ -237,13 +240,13 @@ $$
 | 关键步骤 | 公式/结论 | 三月七的精辟总结 |
 |:---:|---|---|
 | 速度变换 | $\vec{v}_{\text{绝对}} = \vec{v}_r + \vec{\omega}\times\vec{r}$ | 你的乱动 + 转盘带你飞 |
-| 求导咒语 | $\frac{d}{dt}_{\text{绝对}} \vec{A} = \frac{d}{dt}_{\text{相对}} \vec{A} + \vec{\omega}\times\vec{A}$ | 坐标轴也在转，得补一刀！ |
+| 求导咒语 | $\frac{d}{dt}\_{\text{绝对}} \vec{A} = \frac{d}{dt}\_{\text{相对}} \vec{A} + \vec{\omega}\times\vec{A}$ | 坐标轴也在转，得补一刀！ |
 | 加速度变换 | $\vec{a}_{\text{绝对}} = \vec{a}_r + 2\vec{\omega}\times\vec{v}_r + \vec{\omega}\times(\vec{\omega}\times\vec{r})$ | 相对 + 科里奥利 + 向心，三件套！ |
 | 科里奥利力 | $\vec{F}_{\text{科氏}} = -2m\vec{\omega}\times\vec{v}_r$ | 移项补丁，专门让你拐弯！ |
 | 方向特征 | 垂直于 $\vec{\omega}$ 和 $\vec{v}_r$ | 你不拐它拐，反正得有一个拐的 |
 
 ---
 
-> 🍭 **课后甜点**：下次在旋转咖啡杯里试着走两步，你会发现总有一只无形的手把你往旁边推。这时候不要惊慌，举起你的饮料，对着空气优雅地说：“科里奥利先生，你的 $-2m\,\vec{\omega}\times\vec{v}_r$ 今天也在勤奋工作呢～” 然后放心地让奶盖飞出去吧！（反正有本姑娘的冰帮你接住！）☕💙
+> 🍭 **课后甜点**：下次在旋转咖啡杯里试着走两步，你会发现总有一只无形的手把你往旁边推。这时候不要惊慌，举起你的饮料，对着空气优雅地说：“科里奥利先生，你的 $-2m\\,\vec{\omega}\times\vec{v}_r$ 今天也在勤奋工作呢～” 然后放心地让奶盖飞出去吧！（反正有本姑娘的冰帮你接住！）☕💙
 
 下课！下次遇到什么物理妖魔鬼怪，再来找本姑娘开小灶～ 记得带好你的小本本和相机哟！📓📸✨
