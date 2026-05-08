@@ -123,14 +123,14 @@ $$
 $$
 \begin{aligned}
 \vec{a}_{\text{绝对}} &= \bigl( \vec{a}_r + \vec{\omega} \times \vec{v}_r \bigr) + \bigl( \vec{\omega} \times \vec{v}_r + \vec{\omega} \times (\vec{\omega} \times \vec{r}) \bigr) \\
-&= \vec{a}_r + \underbrace{2\,\vec{\omega} \times \vec{v}_r}_{\text{两个}\vec{\omega}\times\vec{v}_r\text{合并}} + \vec{\omega} \times (\vec{\omega} \times \vec{r})
+&= \vec{a}_r + \underbrace{2\\,\vec{\omega} \times \vec{v}_r}_{\text{两个}\vec{\omega}\times\vec{v}_r\text{合并}} + \vec{\omega} \times (\vec{\omega} \times \vec{r})
 \end{aligned}
 $$
 
 **当当当！完整的旋转参考系加速度变换公式，现身！** 🎊
 
 $$
-\boxed{\vec{a}_{\text{绝对}} = \vec{a}_r + 2\,\vec{\omega} \times \vec{v}_r + \vec{\omega} \times (\vec{\omega} \times \vec{r})}
+\boxed{\vec{a}_{\text{绝对}} = \vec{a}_r + 2\\,\vec{\omega} \times \vec{v}_r + \vec{\omega} \times (\vec{\omega} \times \vec{r})}
 $$
 
 ---
