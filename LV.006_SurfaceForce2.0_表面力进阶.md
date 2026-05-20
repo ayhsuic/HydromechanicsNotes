@@ -12,7 +12,8 @@
 
 > 🔪 **核心定义**：取一个无穷小的平面面元 $\Delta A$，它有一个单位法向量 $\vec{n}$（规定哪边是“正面”）。设通过这个面元，**正面**对**负面**施加的力为 $\Delta \vec{F}$。
 
-我们定义**应力矢量**为：
+我们定义**应力矢量**为： 
+
 $$
 \boxed{\vec{t} = \lim_{\Delta A \to 0} \frac{\Delta \vec{F}}{\Delta A}}
 $$
@@ -41,7 +42,7 @@ $$
 
 $\mathbf{T}$ 就是**应力张量**，一个 3×3 的矩阵。它不依赖 $\vec{n}$ —— **不管你怎么切面，受力都能通过同一个 $\mathbf{T}$ 算出来！**
 
-> 🍨 **三月七点破**：$\mathbf{T}$ 就是流体每一点内置的“超级受力计算器”。你给它一个截面方向，它立刻给你吐出该截面的单位面积受力。比本姑娘的照相机自动对焦还灵敏！
+> 🍨 **三月七点破**： $\mathbf{T}$ 就是流体每一点内置的“超级受力计算器”。你给它一个截面方向，它立刻给你吐出该截面的单位面积受力。比本姑娘的照相机自动对焦还灵敏！
 
 ### 张量的分量与压强的“反号约定”
 
@@ -59,9 +60,10 @@ $$
 > - $\sigma_{xx}$：作用在法向为 $x$ 的面上的 $x$ 方向应力（法向）。
 > - $\tau_{xy}$：作用在法向为 $x$ 的面上的 $y$ 方向应力（切向）。
 
-**压强的负号从哪里来？** 在静止流体中，只有垂直向内的压力，没有剪切。压力总是往里面挤，而 $\vec{n}$ 指向外。所以它俩方向相反：
+**压强的负号从哪里来？** 在静止流体中，只有垂直向内的压力，没有剪切。压力总是往里面挤，而 $\vec{n}$ 指向外。所以它俩方向相反： 
+
 $$
-\vec{t} = -p\,\vec{n} \quad \Rightarrow \quad \mathbf{T} = -p\mathbf{I} = \begin{bmatrix}
+\vec{t} = -p\\,\vec{n} \quad \Rightarrow \quad \mathbf{T} = -p\mathbf{I} = \begin{bmatrix}
 -p & 0 & 0 \\
 0 & -p & 0 \\
 0 & 0 & -p
@@ -103,7 +105,7 @@ $$
 当我们对有限体积 $V$ 的流体写动量守恒时，表面力的合力是作用在**封闭表面 $S$** 上的积分：
 
 $$
-\vec{F}_{\text{表面}} = \oint_S \vec{t}\, dA = \oint_S (\mathbf{T} \cdot \vec{n})\, dA
+\vec{F}_{\text{表面}} = \oint_S \vec{t}\\, dA = \oint_S (\mathbf{T} \cdot \vec{n})\\, dA
 $$
 
 这是一个**面积分**。但方程里的惯性力、质量力都是体积分 $\int_V (\cdots) dV$，没法直接相加减。
@@ -112,22 +114,24 @@ $$
 
 > 📜 **高斯散度定理**
 > 对于一个在体积 $V$ 内足够光滑的向量场 $\vec{B}$，有：
-> $$
-> \oint_S (\vec{B} \cdot \vec{n})\, dA = \int_V (\nabla \cdot \vec{B})\, dV
-> $$
+
+$$
+\oint_S (\vec{B} \cdot \vec{n})\\, dA = \int_V (\nabla \cdot \vec{B})\\, dV
+$$
 
 它的物理意义惊人地优美：
 - **左边**：统计所有从表面流出去的量（总通量）。
 - **右边**：统计内部每个点“产生”了多少量（散度的累积）。
 - **等号**：说明总量相等——不管你是守在外壳数流出，还是钻进内部挨个查产出，最后账目平了！
 
-现在，我们的被积函数是 $\mathbf{T} \cdot \vec{n}$，它是一个**向量**。高斯定理对向量的每个分量都适用。把 $\mathbf{T}$ 的每一行当作 $\vec{B}$ 来套用，我们就得到：
+现在，我们的被积函数是 $\mathbf{T} \cdot \vec{n}$ ，它是一个**向量**。高斯定理对向量的每个分量都适用。把 $\mathbf{T}$ 的每一行当作 $\vec{B}$ 来套用，我们就得到：
 
 $$
-\boxed{\oint_S (\mathbf{T} \cdot \vec{n})\, dA = \int_V (\nabla \cdot \mathbf{T})\, dV}
+\boxed{\oint_S (\mathbf{T} \cdot \vec{n})\\, dA = \int_V (\nabla \cdot \mathbf{T})\\, dV}
 $$
 
-其中 $\nabla \cdot \mathbf{T}$ 是**应力张量的散度**，一个**向量**，它的第 $i$ 个分量是：
+其中 $\nabla \cdot \mathbf{T}$ 是**应力张量的散度**，一个**向量**，它的第 $i$ 个分量是： 
+
 $$
 (\nabla \cdot \mathbf{T})_i = \frac{\partial \sigma_{i1}}{\partial x_1} + \frac{\partial \sigma_{i2}}{\partial x_2} + \frac{\partial \sigma_{i3}}{\partial x_3}
 $$
@@ -144,12 +148,14 @@ $$
 \nabla \cdot \mathbf{T} = \nabla \cdot (-p\mathbf{I} + \mu (\nabla \vec{v} + (\nabla \vec{v})^T)) = -\nabla p + \mu \nabla \cdot (\nabla \vec{v} + (\nabla \vec{v})^T)
 $$
 
-在不可压缩流体中 $\nabla \cdot \vec{v} = 0$，利用矢量恒等式，可以证明：
+在不可压缩流体中 $\nabla \cdot \vec{v} = 0$，利用矢量恒等式，可以证明： 
+
 $$
 \nabla \cdot (\nabla \vec{v} + (\nabla \vec{v})^T) = \nabla^2 \vec{v}
 $$
 
-于是：
+于是： 
+
 $$
 \boxed{\nabla \cdot \mathbf{T} = -\nabla p + \mu \nabla^2 \vec{v}}
 $$
